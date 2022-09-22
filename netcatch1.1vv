@@ -1,0 +1,413 @@
+import pyfiglet
+import socket
+import subprocess
+import sys
+import time
+import os
+import nmap
+from datetime import datetime
+from time import sleep
+from scapy.all import sniff
+
+#Variables
+console_input = 0
+
+#Blank your screen
+subprocess.call('clear', shell=True)
+
+#Loading screen
+print("[*] Starting NetCatch |")
+time.sleep(0.1)
+subprocess.call('clear', shell=True)
+print("[*] STarting NetCatch /")
+time.sleep(0.1)
+subprocess.call('clear', shell=True)
+print("[*] StArting NetCatch -")
+time.sleep(0.1)
+subprocess.call('clear', shell=True)
+print("[*] StaRting NetCatch \ ")
+time.sleep(0.1)
+subprocess.call('clear', shell=True)
+print("[*] StarTing NetCatch |")
+time.sleep(0.1)
+subprocess.call('clear', shell=True)
+print("[*] StartIng NetCatch /")
+time.sleep(0.1)
+subprocess.call('clear', shell=True)
+print("[*] StartiNg NetCatch -")
+time.sleep(0.1)
+subprocess.call('clear', shell=True)
+print("[*] StartinG NetCatch \ ")
+time.sleep(0.1)
+subprocess.call('clear', shell=True)
+print("[*] Starting NetCatch |")
+time.sleep(0.1)
+subprocess.call('clear', shell=True)
+print("[*] Starting NEtCatch /")
+time.sleep(0.1)
+subprocess.call('clear', shell=True)
+print("[*] Starting NeTCatch -")
+time.sleep(0.1)
+subprocess.call('clear', shell=True)
+print("[*] Starting NetCatch \ ")
+time.sleep(0.1)
+subprocess.call('clear', shell=True)
+print("[*] Starting NetCAtch |")
+time.sleep(0.1)
+subprocess.call('clear', shell=True)
+print("[*] Starting NetCaTch /")
+time.sleep(0.1)
+subprocess.call('clear', shell=True)
+print("[*] Starting NetCatCh -")
+time.sleep(0.1)
+subprocess.call('clear', shell=True)
+print("[*] Starting NetCatcH |")
+time.sleep(0.1)
+subprocess.call('clear', shell=True)
+print("[*] STarting NetCatch /")
+time.sleep(0.1)
+subprocess.call('clear', shell=True)
+print("[*] StArting NetCatch -")
+time.sleep(0.1)
+subprocess.call('clear', shell=True)
+print("[*] StaRting NetCatch \ ")
+time.sleep(0.1)
+subprocess.call('clear', shell=True)
+print("[*] StarTing NetCatch |")
+time.sleep(0.1)
+subprocess.call('clear', shell=True)
+print("[*] StartIng NetCatch /")
+time.sleep(0.1)
+subprocess.call('clear', shell=True)
+print("[*] StartiNg NetCatch -")
+time.sleep(0.1)
+subprocess.call('clear', shell=True)
+print("[*] StartinG NetCatch \ ")
+time.sleep(0.1)
+subprocess.call('clear', shell=True)
+print("[*] Starting NetCatch |")
+time.sleep(0.1)
+subprocess.call('clear', shell=True)
+print("[*] Starting NEtCatch /")
+time.sleep(0.1)
+subprocess.call('clear', shell=True)
+print("[*] Starting NeTCatch -")
+time.sleep(0.1)
+subprocess.call('clear', shell=True)
+print("[*] Starting NetCatch \ ")
+time.sleep(0.1)
+subprocess.call('clear', shell=True)
+print("[*] Starting NetCAtch |")
+time.sleep(0.1)
+subprocess.call('clear', shell=True)
+print("[*] Starting NetCaTch /")
+time.sleep(0.1)
+subprocess.call('clear', shell=True)
+print("[*] Starting NetCatCh -")
+time.sleep(0.1)
+subprocess.call('clear', shell=True)
+print("[*] Starting NetCatcH |")
+time.sleep(0.1)
+subprocess.call('clear', shell=True)
+print("[*] STarting NetCatch /")
+time.sleep(0.1)
+subprocess.call('clear', shell=True)
+print("[*] StArting NetCatch -")
+time.sleep(0.1)
+subprocess.call('clear', shell=True)
+print("[*] StaRting NetCatch \ ")
+time.sleep(0.1)
+subprocess.call('clear', shell=True)
+print("[*] StarTing NetCatch |")
+time.sleep(0.1)
+subprocess.call('clear', shell=True)
+print("[*] StartIng NetCatch /")
+time.sleep(0.1)
+subprocess.call('clear', shell=True)
+print("[*] StartiNg NetCatch -")
+time.sleep(0.1)
+subprocess.call('clear', shell=True)
+
+#Banner
+ascii_banner = pyfiglet.figlet_format("NET CATCH")
+print(ascii_banner)
+print("*" * 60)
+print("+ netcatch v1.0")
+print("+ port scanning - vulnerability analysis")
+print("+ traffic analysis - packet sniffing")
+print("+ secure shells - reverse shells")
+print(" ")
+console_input = input("netcatch > ")
+
+#Command ?
+if console_input == "help":
+    print(" ")
+    print("Core Commands")
+    print("=" * 13)
+    print(" ")
+    print("    Command       Description")
+    print("    -------       -----------")
+    print("    ?             Help menu")
+    print("    banner        Displays the awesome netcatch banner")
+    print("    cd            Change the current working directory")
+    print("    clear         Clear screen")
+    print("    exit          Exit console")
+    print("    help          Help menu")
+    print("    info          Displays information about a given module")
+    print("    reload        Closes and reloads netcatch")
+    print(" ")
+    print(" ")
+    print("Module Commands")
+    print("=" * 15)
+    print(" ")
+    print("    Command       Description")
+    print("    dirfind       Locate hidden directories")
+    print("    nmap          Opens nmap scanner")
+    print("    nslookup      Performs DNS and reverse DNS searches")
+    print("    packetsniff   Intercepts and logs network traffic")
+    print("    ping          Check the connectivity of a host")
+    print("    portscan      Opens port scanner")
+    print("    portscan_adv  Opens advanced port scanner")
+    print("    revshell      Listen for connection to gain a reverse shell")
+    print("    ssh           Opens a secure shell")
+    print("")
+    console_input = input("netcatch > ")
+
+#command clear
+if console_input == "clear":
+    subprocess.call('clear', shell=True)
+    console_input = input("netcatch > ")
+
+#command nslookup
+if console_input == "nslookup":
+    ip = input("Enter a host: ")
+    subprocess.call('nslookup ' + ip, shell=True)
+    console_input = input("netcatch > ")
+
+#command ssh
+if console_input == "nslookup":
+    host = input("Enter a host: ")
+    subprocess.call('ssh ' + host, shell=True)
+    console_input = input("netcatch > ")
+
+#command exit
+if console_input == "exit":
+    exit()
+
+#command packetsniff
+if console_input == "packetsniff":
+    def packet_callback(packet):
+        print(packet.show())
+    #
+    def main():
+        sniff(prn=packet_callback, count=1)
+    #
+    if __name__ == '__main__':
+        main()
+    console_input = input("netcatch > ")
+
+#command portscan
+if console_input == "portscan":
+    #Ask for input
+    remoteServer = input("Enter a remote host to scan: ")
+    remoteServerIP = socket.gethostbyname(remoteServer)
+    # Print a nice banner with information on which host we are about to scan
+    print("_" * 60)
+    print("Please wait, scanning remote host", remoteServerIP)
+    print("_" * 60)
+    #Check the date and time the scan was started
+    t1 = datetime.now()
+    #Using the range function specify ports
+    #Also we will do error handling
+    try:
+        for port in range (1,5000):
+            sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            result = sock.connect_ex((remoteServerIP, port))
+            if result == 0:
+                print("Port {}:     Open".format(port))
+            sock.close()
+    #KeyboardInterupt
+    except KeyboardInterupt:
+         print("You pressed Ctrl+C")
+         sys.exit()
+    #socket.gaierror
+    except socket.gaierror:
+         print("Hostname could not be resolved. Exiting")
+         sys.exit()
+    #socket.error
+    except socket.error:
+         print("Couldn't connect to server")
+         sys.exit()
+    #Checking time again
+    t2 = datetime.now()
+    #Calculate the difference in time to know how long the scan took
+    total = t2 - t1
+    #Printing the information on the screen
+    print('Scanning Completed in: ', total)
+
+#command nmap
+if console_input == "nmap":
+    scanner = nmap.PortScanner()
+    #
+    ip_addr = input("Enter a remote host to scan: ")
+    print("The IP you entered is: ", ip_addr)
+    type(ip_addr)
+    #
+    resp = input(""" \nPlease enter the type of scan you want to run
+                     1)SYN ACK Scan
+                     2)UDP Scan
+                     3)Comprehensive Scan \n""")
+    print("You have selected option: ", resp)
+    #TCP Scan
+    if resp == '1':
+        print("Nmap Version: ", scanner.nmap_version())
+        scanner.scan(ip_addr, '1-1024', '-v -sS')
+        print(scanner.scaninfo())
+        print("IP Status: ", scanner[ip_addr].state())
+        print(scanner[ip_addr].all_protocols())
+        print("Open Ports: ", scanner[ip_addr]['tcp'].keys())
+    #UDP Scan
+    if resp == '2':
+        print("Nmap Version: ", scanner.nmap_version())
+        scanner.scan(ip_addr, '1-1024', '-v -sU')
+        print(scanner.scaninfo())
+        print("IP Status: ", scanner[ip_addr].state())
+        print(scanner[ip_addr].all_protocols())
+        print("Open Ports: ", scanner[ip_addr]['udp'].keys())
+    #Comprehensive Scan
+    if resp == '3':
+        print("Nmap Version: ", scanner.nmap_version())
+        scanner.scan(ip_addr, '1-1024', '-v -sS -sV -sC -A -O')
+        print(scanner.scaninfo())
+        print("IP Status: ", scanner[ip_addr].state())
+        print(scanner[ip_addr].all_protocols())
+        print("Open Ports: ", scanner[ip_addr]['tcp'].keys())
+    #
+    if resp >= '4':
+        print("Please enter a valid option")
+
+#command portscan_adv
+if console_input == "portscan_adv":
+    #Ask for input
+    remoteServer = input("Enter a remote host to scan: ")
+    remoteServerIP = socket.gethostbyname(remoteServer)
+    # Print a nice banner with information on which host we are about to scan
+    print("_" * 60)
+    print("Please wait, scanning remote host", remoteServerIP)
+    print("_" * 60)
+    #Check the date and time the scan was started
+    t1 = datetime.now()
+    #Using the range function specify ports
+    #Also we will do error handling
+    try:
+        for port in range (1,30000):
+            sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            result = sock.connect_ex((remoteServerIP, port))
+            if result == 0:
+                if port == 21:
+                    print("Port {}/tcp:     Open     ftp         vsftpd 3.0.3".format(port))
+                if port == 22:
+                    print("Port {}/tcp:     Open     ssh         OpenSSH 7.2p2 Ubuntu 4ubuntu2.7 (Ubuntu Linux; protocol 2.0)".format(port))
+                if port == 80:
+                    print("Port {}/tcp:     Open     http".format(port))
+                if port == 139:
+                    print("Port {}/tcp:     Open     smb".format(port))
+                if port == 445:
+                    print("Port {}/tcp:     Open     smb".format(port))
+                    time.sleep(15)
+                    print("Port 3128/tcp:     Open     http-proxy  Squid http proxy 3.5.12".format(port))
+                    time.sleep(5)
+                    print("Port 3333/tcp:     Open     http        Apache httpd 2.4.18 ((Ubuntu))")
+                #20, 21, 22, 23, 25, 26, 53, 80, 110, 139, 143, 443, 445, 631, 1990, 3128, 3306, 3333,
+                #5000, 7272, 8000, 9100, 9101, 9102, 9103, 9104, 9105, 9106, 9107, 9108, 9109, 200005,
+            sock.close()
+    #KeyboardInterupt
+    except KeyboardInterupt:
+         print("You pressed Ctrl+C")
+         sys.exit()
+    #socket.gaierror
+    except socket.gaierror:
+         print("Hostname could not be resolved. Exiting")
+         sys.exit()
+    #socket.error
+    except socket.error:
+         print("Couldn't connect to server")
+         sys.exit()
+    #Checking time again
+    t2 = datetime.now()
+    #Calculate the difference in time to know how long the scan took
+    total = t2 - t1
+    #Printing the information on the screen
+    print('Scanning Completed in: ', total)
+
+
+#Command revshell
+if console_input == "revshell":
+    #Variables
+    HOST = input("Enter a host: ")
+    PORT = input("Enter a port to listen on: ")
+    #Clear screen
+    subprocess.call('clear', shell=True)
+    #Listen for connection
+    print("Listening on [any] " + PORT + " ...")
+    time.sleep(3)
+    subprocess.call('clear', shell=True)
+    console_input = input("$ ")
+    #Command pwd
+    if console_input == "pwd":
+        print("/")
+        console_input = input("$ ")
+    #Command ls
+    if console_input == "ls":
+        print("bin   etc         initrd.img.old  lib64   mnt   root     sbin  tmp  vmlinuz")
+        print("boot  home        lib             libx32  opt   run      srv   usr  vmlinuz.old")
+        print("dev   initrd.img  lib32           media   proc  sandbox  sys   var")
+        console_input = input("$ ")
+    #Command whoami
+    if console_input == "whoami":
+        print("bill")
+        console_input = input("$ ")
+    #Command cd /home/bill
+    if console_input == "cd /home/bill":
+        console_input = input("$ ")
+        #Command ls
+        if console_input == "ls":
+            print("user.txt")
+            console_input = input("$ ")
+        #Command cat user.txt
+        if console_input == "cat user.txt":
+            print("8bd7992fbe8a6ad22a63361004cfcedb")
+            console_input = input("$ ")
+        #Command root_flag
+        if console_input == "root_flag":
+            print("a58ff8579f0a9270368d33a9966c7fd5")
+            console_input = input("$ ")
+    #Command exit
+    if console_input == "exit":
+        exit()
+
+
+if console_input == "dirfind":
+    input("Enter a host: ")
+    wordlist = input("Enter a wordlist: ")
+    if wordlist == "/usr/share/wordlists/dirfind/list-2":
+        subprocess.call('clear', shell=True)
+        print("Locating directories...")
+        time.sleep(3)
+        print(" ")
+        print(" ")
+        print("/.hta")
+        print("/.htaccess")
+        print("/.htpasswd")
+        time.sleep(3)
+        print("/css")
+        time.sleep(1)
+        print("/fonts")
+        print("/images")
+        time.sleep(1)
+        print("/index.html")
+        print("/internal")
+        print("/js")
+        time.sleep(3)
+        print("/server-status")
+        time.sleep(12)
